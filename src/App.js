@@ -8,7 +8,6 @@ import './App.css'
  * @type {React.FC}
  */
 export const App = () => {
-  console.log("aaaaaaa")
   const [dogUrl, setDogUrl] = useState('https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg')
   const url = 'https://dog.ceo/api/breeds/image/random'
   const handleClick = async () => {
