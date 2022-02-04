@@ -8,7 +8,7 @@ export const DogListContainer = () => {
     const url = 'https://dog.ceo/api/breeds/list/all' 
     fetch(url)
     .then(res => res.json())
-    .then(data => setBreeds(data.message))
+    .then(data => setBreeds(Object.keys(data.message)))
   },[])
 
   return breeds

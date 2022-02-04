@@ -16,8 +16,9 @@ export const App = () => {
   const handleClick = async () => {
     await fetch(url)
     .then(res => res.json())
-    .then(data => setDogUrl(data.message))
+    .then(data => setDogUrl(Object.keys(data.message)))
   }
+  console.log(dogUrl)
   return (
     <div className='wrapper'>
       <Header />
