@@ -1,6 +1,8 @@
 // DO NOT DELETE
 
 import React, {useState} from 'react'
+import { Header } from './Header'
+import { Description } from './Description'
 import './App.css'
 
 /**
@@ -17,12 +19,8 @@ export const App = () => {
   }
   return (
     <div className='wrapper'>
-      <header className='title'>dogアプリ</header>
-      <p className='description'>犬の画像を表示するアプリです。</p>
-      <button className='button' onClick={handleClick}>おせおせ</button>
-      <div className='imgWrapper'>
-        <img src={dogUrl} />
-      </div>
+      <Header />
+      <Description img={dogUrl} onClick={handleClick} />
     </div>
   )
 }
