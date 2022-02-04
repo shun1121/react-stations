@@ -10,4 +10,6 @@ export const DogListContainer = () => {
     .then(res => res.json())
     .then(data => setBreeds(data.message))
   },[])
+
+  return breeds
 }
