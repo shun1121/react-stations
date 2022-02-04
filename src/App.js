@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { Header } from './Header'
 import { Description } from './Description'
+import { DogListContainer } from './DogListContainer'
 import './App.css'
 
 /**
@@ -15,12 +16,13 @@ export const App = () => {
   const handleClick = async () => {
     await fetch(url)
     .then(res => res.json())
-    .then(data => console.log(data.message))
+    .then(data => setDogUrl(data.message))
   }
   return (
     <div className='wrapper'>
       <Header />
       <Description img={dogUrl} onClick={handleClick} />
+      <DogListContainer />
     </div>
   )
 }
