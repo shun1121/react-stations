@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 
 export const DogListContainer = () => {
-  const [breeds, setBreeds] = useState({})
+  const [breeds, setBreeds] = useState([])
   
   useEffect(() => {
     const url = 'https://dog.ceo/api/breeds/list/all' 
