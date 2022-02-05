@@ -1,8 +1,10 @@
 // DO NOT DELETE
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import { BreedsSelect } from './BreedsSelect'
 
 export const DogListContainer = () => {
   const [breeds, setBreeds] = useState([])
+  const [selectedBreed, setSelectedBreed] = useState('')
   
   useEffect(() => {
     const url = 'https://dog.ceo/api/breeds/list/all' 
@@ -11,5 +13,12 @@ export const DogListContainer = () => {
     .then(data => setBreeds(Object.keys(data.message)))
   },[])
 
-  return breeds
+  const handleChange = (e) => {
+    setSelectedBreed(e.target.value)
+  }
+
+  console.log(selectedBreed)
+  return (
+    <BreedsSelect list={breeds} val={selectedBreed} handleChange={handleChange} />
+  )
 }
