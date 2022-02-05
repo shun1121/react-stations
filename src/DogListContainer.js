@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { BreedsSelect } from './BreedsSelect'
 
 export const DogListContainer = () => {
-  const [breeds, setBreeds] = useState([])
+  const [breeds, setBreeds] = useState(['initial'])
   const [selectedBreed, setSelectedBreed] = useState('')
   
   useEffect(() => {
