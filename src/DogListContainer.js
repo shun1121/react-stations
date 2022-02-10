@@ -45,9 +45,11 @@ export const DogListContainer = () => {
           <button onClick={handleClick}>表示</button>
         </>
       }
-      {(breedLists || []).map((breedList, i) => (
-        <img key={i} src={breedList} />
-      ))}
+      <div>
+        {(breedLists || []).map((breedList, i) => (
+          <img key={i} src={breedList} />
+        ))}
+      </div>
     </>
   )
 }
